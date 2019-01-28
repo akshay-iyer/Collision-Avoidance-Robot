@@ -8,10 +8,9 @@ I have used a Roomba looking robot with 8 Hokuyo laser sensors attached at 45 de
 
 The world contains of different kind of obstacles like walls, spheres, barricades, cylinders, etc.
 
-
 The obstacle avoidance strategy :
 1. Move robot with constant linear velocity in x-direction and scan from sensors 1 to 8 
-2. Get the Euclidean distances onto a dictionary
+2. Get the Euclidean distances onto a python dictionary
 3. Threshold the dictionary of sensor values as per the defined threshold (1m)
 4. If there is an obstacle in the 3 frontal sensors:
     a. Stop the linear motion
@@ -21,6 +20,26 @@ The obstacle avoidance strategy :
 5.Repeat from step 1 
 
 The robot successfully navigates obstacles. It is also found to successfully avoid spherical obstacles but gets stuck on table edges.
+
+1. Clone the project files onto a new directory within your catkin workspace 
+    mkdir ~/catkin_ws/src/Obstacle_Avoidance_ROS
+    cd ~/catkin_ws/src/Obstacle_Avoidance_ROS
+    git clone https://github.com/akshay-iyer/Collision-Avoidance-Robot
+    cd ~/catkin_ws
+    catkin_make
+2. Launch ROS CORE in a new terminal
+    roscore 
+3. Launch the Gazebo simulation in a new terminal window
+    roslaunch Obstacle_Avoidance_ROS testbot_gazebo.launch
+4. Run the python script in a new terminal
+    rosrun Obstacle_Avoidance_ROS listener.py
+    
+The python code is well commented and can be easily followed along with the algorithm above
+
+Happy Coding!
+
+
+        
 
 The simulator packages have been  based on https://github.com/vibhuthasak/Obstacle_Avoidance_ROS
 
