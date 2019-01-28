@@ -1,5 +1,6 @@
 # Collision-Avoidance-Robot
 A reactive collision avoidance robot simulation on Gazebo
+Youtube video link - https://youtu.be/1MVq4iFitB4
 
 The collision avoidance robot is created using Python on ROS and Gazebo was used for the simulation. Listener.py is the python script to carry out the obstacle avoidance behavior and collision_avoidance.urdf is the urdf file created for my robot. The video shows the avoidance as well as the relative rotation, translation and absolute position on the terminal window
 
@@ -20,4 +21,7 @@ The obstacle avoidance strategy :
 5.Repeat from step 1 
 
 The robot successfully navigates obstacles. It is also found to successfully avoid spherical obstacles but gets stuck on table edges.
+
+The simulator packages have been  based on https://github.com/vibhuthasak/Obstacle_Avoidance_ROS
+
 
